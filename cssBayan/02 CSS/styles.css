@@ -1,0 +1,41 @@
+/* Стили */
+
+div.a{
+	position: relative; /*проверить друге режимы*/
+	margin:2em; /*отступ блока а*/
+  }
+
+  h1{
+	background:rgb(0, 0, 0);
+	color:white;
+	padding:1em;
+	position: relative;
+  }
+
+  h2{
+	background:rgb(3, 7, 252);
+	color:white;
+	padding:1em;
+	position: relat ive;
+  }
+
+  input{
+	position: absolute; /*надвинул блоки друг на друга */
+	/*не смотря что блок раздвинут на 100%  ездь зона H2 должно быть в верху 20:40 */
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	opacity:0; /*вид галочки */
+	visibility: 0;/*скрыть галочку*/
+  }
+ 
+  div.im1{
+	max-height:0px;
+	overflow: hidden;
+  } /*убираем или добовляем  картинки вид картинки  */
+
+ 
+   input:checked ~ .im1 {
+	max-height:100%;
+  }
