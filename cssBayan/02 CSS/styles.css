@@ -3,10 +3,7 @@
 /*h://habr.com/ru/post/174029/,h://codepen.io/bilal-pf/pen/eYZrPGW  */
 
 
-div.im1:hover{
-	cursor: cell;
-	
-  }
+
 
 div.a{
 	position: relative; /*проверить друге режимы*/
@@ -22,7 +19,7 @@ div.a{
   }
 
   h2{
-	background: rgb(3, 7, 252);
+	background: rgb(0, 0, 255);
     color: white;
     padding: 0.6em;
     position: relat ive;
@@ -87,7 +84,13 @@ div.a{
 	border-right: 17px solid white;
   }
 
- 
+  h2:hover{
+	cursor: cell;
+	background: rgb(255, 0, 255);
+	
+  }
+
+
 /* пункт 6 задания */
   @media (max-width: 480px) {
 	/*font-size: 1.2em;*/
