@@ -1,0 +1,112 @@
+/* Стили */
+
+/*h://habr.com/ru/post/174029/,h://codepen.io/bilal-pf/pen/eYZrPGW  */
+
+
+
+
+div.a{
+	position: relative; /*проверить друге режимы*/
+	margin:0.5em; /*отступ блока а*/
+  }
+
+  h1{
+	background:rgb(0, 0, 0);
+	color:white;
+	padding:1em;
+	position: relative;
+	margin: 1em 0em;
+  }
+
+  h2{
+	background: rgb(0, 0, 255);
+    color: white;
+    padding: 0.6em;
+    position: relat ive;
+    margin-block-start: -1em;
+
+  }
+
+  input{
+	position: absolute; /*надвинул блоки друг на друга */
+	/*не смотря что блок раздвинут на 100%  ездь зона H2 должно быть в верху 20:40 */
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	opacity:0; /*вид галочки */
+	visibility: 0;/*скрыть галочку*/
+  }
+ 
+  div.im1{
+	max-height:0px;
+	overflow: hidden;
+	display: flex;  /*пунк 2 задания*/
+	justify-content: center;
+	transition-property: max-height;
+	transition-timing-function: linear;
+	transition-duration:  1s; /* пункт 5 задания*/
+
+  } /*убираем или добовляем  картинки вид картинки  */
+
+ 
+   input:checked ~ .im1 {
+	max-height: 250px;
+    margin: 1em;
+  }
+
+
+
+
+  label{
+	/*cursor: pointer;*/
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+ 
+  input:checked ~ h2 label::before{
+	border-right:15px solid transparent;
+	border-top:20px solid white;
+	/* margin-top:12px;*/
+	/*margin-right:10px;*/
+
+	
+  }
+
+  label::before{
+	content:"";
+	/*display: inline-block;*/
+	border: 15px solid transparent;
+	border-right: 17px solid white;
+  }
+
+  h2:hover{
+	cursor: cell;
+	background: rgb(255, 0, 255);
+	
+  }
+
+
+/* пункт 6 задания */
+  @media (max-width: 480px) {
+	/*font-size: 1.2em;*/
+	input:checked ~ .im1 {
+		max-height: 150px;
+	  }
+  }
+  @media (max-width: 820px) {
+	/*font-size: 1.2em;*/
+	input:checked ~ .im1 {
+		max-height: 250px;
+	  }
+  }
+  @media (max-width: 1920px) {
+	/*font-size: 1.2em;*/
+	input:checked ~ .im1 {
+		max-height: 450px;
+	  }
+  }
